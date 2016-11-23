@@ -3,6 +3,7 @@ const client = new Discord.Client();
 const git = require(`git-rev`);
 
 const config = require("./config.json")
+const help = require("./help.json")
 
 client.on('ready', () => {
   console.log('I am ready!');
@@ -39,11 +40,6 @@ client.on('message', message => {
   command = command.slice(config.prefix.length);
 
   let args = message.content.split(" ").splice(1);
-
-  //Help Command
-  if (command === "help"){
-    message.channel.sendMessage("``` **VizBot.JS** \n Welcome user to the Vizbot.JS help system \n ---------- \n All commands are prefaced by a greater than symbol (>) and must be written in lower case E.G >help would bring up this help menu. \n \n >help :- Brings up this help menu \n >kick <@USER_NAME> :- Kicks the mentioned user from the Discord server \n >warn <@USER_NAME> :- Warns the mentioned user  \n >add<NUMBERS SEPERATED BY SPACES> :- Will add together given numbers \n >subtract<NUMBERS SEPERATED BY SPACES> :- will subtract given numbers \n >multiply<NUMBERS SEPERATED BY SPACES> :- will multiply given numbers \n >divide<NUMBERS SEPERATED BY SPACES> :- will divide given numbers \n >say<INPUT> :- Forces the bot to repeat user input \n >purge :- Clears the last 100 comments from the text channel \n >avatarurl :- Provides the user with a link to their Discord avatar \n >dice :- Rolls two dice and gives you the result \n >bottest :- used for testing the bot connectivity```");
-  }
 
   //Kick Command (Probably used to kick king from discord)
   if (command === "kick"){
@@ -87,6 +83,14 @@ client.on('message', message => {
       message.channel.sendMessage(`${warnMember} you have been warned`);
     }
 
+  //FancyHelp
+  if (command === "help"){
+    var fs = require("fs");
+    var contents = fs.readFileSync("help.json");
+    var jsonContent = JSON.parse(contents);
+
+    message.reply(jsonContent.text);
+  }
   //Avatar Command
   if (command === "avatarurl"){
     message.reply(message.author.avatarURL);
