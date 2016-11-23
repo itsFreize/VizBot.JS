@@ -1,5 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const git = require(`git-rev`);
+const delayed = require(`delayed`);
 
 const config = require("./config.json")
 
@@ -41,15 +43,7 @@ client.on('message', message => {
 
   //Help Command
   if (command === "help"){
-    message.channel.sendMessage("``` **VizBot.JS** \n Welcome user to the Vizbot.JS help system \n ---------- \n All commands are prefaced by a greater than symbol (>) and must be written in lower case E.G >help would bring up this help menu. \n \n >help :- Brings up this help menu \n >kick <@USER_NAME> :- Kicks the mentioned user from the Discord server \n >add<NUMBERS SEPERATED BY SPACES> :- Will add together given numbers \n >subtract<NUMBERS SEPERATED BY SPACES> :- will subtract given numbers \n >multiply<NUMBERS SEPERATED BY SPACES> :- will multiply given numbers \n >divide<NUMBERS SEPERATED BY SPACES> :- will divide given numbers \n >say<INPUT> :- Forces the bot to repeat user input \n >purge :- Clears the last 100 comments from the text channel \n >avatarurl :- Provides the user with a link to their Discord avatar \n >test :- used for testing the bot connectivity```");
-  }
-
-  if (command === "ping"){
-    String.prototype.repeat = function( num )
-    {
-      return new Array( num + 1).join( this );
-    }
-    message.channel.sendMessage(`\n Pinging KingCobra52 [IP-TRUNCATED] with 32 bytes of data \n` .repeat (5));
+    message.channel.sendMessage("``` **VizBot.JS** \n Welcome user to the Vizbot.JS help system \n ---------- \n All commands are prefaced by a greater than symbol (>) and must be written in lower case E.G >help would bring up this help menu. \n \n >help :- Brings up this help menu \n >kick <@USER_NAME> :- Kicks the mentioned user from the Discord server \n >add<NUMBERS SEPERATED BY SPACES> :- Will add together given numbers \n >subtract<NUMBERS SEPERATED BY SPACES> :- will subtract given numbers \n >multiply<NUMBERS SEPERATED BY SPACES> :- will multiply given numbers \n >divide<NUMBERS SEPERATED BY SPACES> :- will divide given numbers \n >say<INPUT> :- Forces the bot to repeat user input \n >purge :- Clears the last 100 comments from the text channel \n >avatarurl :- Provides the user with a link to their Discord avatar \n >bottest :- used for testing the bot connectivity```");
   }
 
   //Kick Command (Probably used to kick king from discord)
@@ -126,12 +120,8 @@ client.on('message', message => {
     message.channel.sendMessage(args.join(" "))
   }
 
-  if(command === "embed"){
-    message.channel.sendMessage('test', {embed:{color:0x429bce,author:{name:"Trello Boards",icon_url:"https://cdn.discordapp.com/app-icons/202929883863580673/ef8cd047b9be40d935f9d83ea88c324d.jpg"}}}).catch(err => message.reply(err.message))
-  }
-
   //Super baisc ping command used to ensure the bot is online
-  if (command === "test") {
+  if (command === "bottest") {
     message.channel.sendMessage('Passed!');
   }
 });
