@@ -1,3 +1,17 @@
 {
-    "text":"```\n**VizBot.JS** \n Welcome to the Vizbot.JS help system \n ---------- \n All commands are prefaced by a greater than symbol (>) and must be written in lower case E.G >help would bring up this help menu. \n \n >help :- Brings up this help menu \n >kick <@USER_NAME> :- Kicks the mentioned user from the Discord server \n >warn <@USER_NAME> :- Warns the mentioned user  \n >add<NUMBERS SEPERATED BY SPACES> :- Will add together given numbers \n >subtract<NUMBERS SEPERATED BY SPACES> :- will subtract given numbers \n >multiply<NUMBERS SEPERATED BY SPACES> :- will multiply given numbers \n >divide<NUMBERS SEPERATED BY SPACES> :- will divide given numbers \n >say<INPUT> :- Forces the bot to repeat user input \n >purge :- Clears the last 100 comments from the text channel \n >avatarurl :- Provides the user with a link to their Discord avatar \n >dice :- Rolls two dice and gives you the result \n >bottest :- used for testing the bot connectivity```"
+    "text":"```\n**VizBot.JS** \n Welcome to the Vizbot.JS help system \n ---------- \n All commands are prefaced by a greater than symbol (>) and must be\n written in lower case E.G >help would bring up this help menu. \n \n >? \n >kick\n >warn \n >add\n >subtract\n >multiply\n >divide\n >say \n >purge\n >avatarurl\n >dice\n >bottest\n ----------\n You can get further help by typing the command followed by an underscore then the word help E.G >help_help```",
+
+    "helphelp" : "```USAGE: >help :- Brings up the main help menu.```",
+    "helpkick" : "```USAGE: >kick <@USER_NAME> :- Kicks the mentioned user from the Discord server.```",
+    "helpwarn" : "```USAGE: >warn <@USER_NAME> :- Provides a written warning for the mentioned user.```",
+    "helpadd" : "```USAGE: >add <NUMBERS> :- Provides a total sum of the numbers provided.```",
+    "helpsubtract" : "```USAGE: >subtract <NUMBERS> :- Provides a total based on the subtraction of provided numbers.```",
+    "helpmultiply" : "```USAGE: >multiply <NUMBERS> :- Provides a total based on the multiplication of provided numbers.```",
+    "helpdivide" : "```USAGE: >divide <NUMBERS> :- Provides a total based on the division of provided numbers.```",
+    "helpsay" : "```USAGE: >say <TEXT TO REPEAT> :- Makes the bot repeat user submitted text.```",
+    "helppurge" : "```USAGE: >purge :- Purges the chat of the last 100 messages (Usably by Super Admins only)```",
+    "helpavatar" : "```USAGE: >avatarurl :- Provides the user with a link to their discord avatar.```",
+    "helpdice" : "```USAGE: >dice :- Rolls two dice and presents the user with the result.```",
+    "helpbottest" : "```USAGE: bottest :- Bot should reply with a test confirmation message.```"
+
 }

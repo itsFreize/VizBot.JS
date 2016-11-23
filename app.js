@@ -91,6 +91,103 @@ client.on('message', message => {
 
     message.reply(jsonContent.text);
   }
+
+  if (command === "help_help"){
+    var fs = require("fs");
+    var contents = fs.readFileSync("help.json");
+    var jsonContent = JSON.parse(contents);
+
+    message.reply(jsonContent.helphelp);
+  }
+
+  if (command === "kick_help"){
+    var fs = require("fs");
+    var contents = fs.readFileSync("help.json");
+    var jsonContent = JSON.parse(contents);
+
+    message.reply(jsonContent.helpkick);
+  }
+
+  if (command === "warn_help"){
+    var fs = require("fs");
+    var contents = fs.readFileSync("help.json");
+    var jsonContent = JSON.parse(contents);
+
+    message.reply(jsonContent.helpwarn);
+  }
+
+  if (command === "add_help"){
+    var fs = require("fs");
+    var contents = fs.readFileSync("help.json");
+    var jsonContent = JSON.parse(contents);
+
+    message.reply(jsonContent.helpadd);
+  }
+
+  if (command === "subtract_help"){
+    var fs = require("fs");
+    var contents = fs.readFileSync("help.json");
+    var jsonContent = JSON.parse(contents);
+
+    message.reply(jsonContent.helpsubtract);
+  }
+
+  if (command === "multiply_help"){
+    var fs = require("fs");
+    var contents = fs.readFileSync("help.json");
+    var jsonContent = JSON.parse(contents);
+
+    message.reply(jsonContent.helpmultiply);
+  }
+
+  if (command === "divide_help"){
+    var fs = require("fs");
+    var contents = fs.readFileSync("help.json");
+    var jsonContent = JSON.parse(contents);
+
+    message.reply(jsonContent.helpdivide);
+  }
+
+  if (command === "say_help"){
+    var fs = require("fs");
+    var contents = fs.readFileSync("help.json");
+    var jsonContent = JSON.parse(contents);
+
+    message.reply(jsonContent.helpsay);
+  }
+
+  if (command === "purge_help"){
+    var fs = require("fs");
+    var contents = fs.readFileSync("help.json");
+    var jsonContent = JSON.parse(contents);
+
+    message.reply(jsonContent.helppurge);
+  }
+
+  if (command === "avatarurl_help"){
+    var fs = require("fs");
+    var contents = fs.readFileSync("help.json");
+    var jsonContent = JSON.parse(contents);
+
+    message.reply(jsonContent.helpavatar);
+  }
+
+  if (command === "dice_help"){
+    var fs = require("fs");
+    var contents = fs.readFileSync("help.json");
+    var jsonContent = JSON.parse(contents);
+
+    message.reply(jsonContent.helpdice);
+  }
+
+  if (command === "bottest_help"){
+    var fs = require("fs");
+    var contents = fs.readFileSync("help.json");
+    var jsonContent = JSON.parse(contents);
+
+    message.reply(jsonContent.helpbottest);
+  }
+
   //Avatar Command
   if (command === "avatarurl"){
     message.reply(message.author.avatarURL);
