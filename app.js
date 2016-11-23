@@ -7,6 +7,7 @@ const config = require("./config.json")
 
 client.on('ready', () => {
   console.log('I am ready!');
+  client.user.setGame("Setting up skynet")
 });
 
 client.on("guildMemberAdd", member => {
@@ -32,7 +33,6 @@ client.on("presenceUpdate", (oldMember, newMember) => {
 });
 
 client.on('message', message => {
-
   if(message.author.bot) return;
   if(!message.content.startsWith(config.prefix)) return;
 
@@ -43,7 +43,7 @@ client.on('message', message => {
 
   //Help Command
   if (command === "help"){
-    message.channel.sendMessage("``` **VizBot.JS** \n Welcome user to the Vizbot.JS help system \n ---------- \n All commands are prefaced by a greater than symbol (>) and must be written in lower case E.G >help would bring up this help menu. \n \n >help :- Brings up this help menu \n >kick <@USER_NAME> :- Kicks the mentioned user from the Discord server \n >add<NUMBERS SEPERATED BY SPACES> :- Will add together given numbers \n >subtract<NUMBERS SEPERATED BY SPACES> :- will subtract given numbers \n >multiply<NUMBERS SEPERATED BY SPACES> :- will multiply given numbers \n >divide<NUMBERS SEPERATED BY SPACES> :- will divide given numbers \n >say<INPUT> :- Forces the bot to repeat user input \n >purge :- Clears the last 100 comments from the text channel \n >avatarurl :- Provides the user with a link to their Discord avatar \n >bottest :- used for testing the bot connectivity```");
+    message.channel.sendMessage("``` **VizBot.JS** \n Welcome user to the Vizbot.JS help system \n ---------- \n All commands are prefaced by a greater than symbol (>) and must be written in lower case E.G >help would bring up this help menu. \n \n >help :- Brings up this help menu \n >kick <@USER_NAME> :- Kicks the mentioned user from the Discord server \n >warn <@USER_NAME> :- Warns the mentioned user  \n >add<NUMBERS SEPERATED BY SPACES> :- Will add together given numbers \n >subtract<NUMBERS SEPERATED BY SPACES> :- will subtract given numbers \n >multiply<NUMBERS SEPERATED BY SPACES> :- will multiply given numbers \n >divide<NUMBERS SEPERATED BY SPACES> :- will divide given numbers \n >say<INPUT> :- Forces the bot to repeat user input \n >purge :- Clears the last 100 comments from the text channel \n >avatarurl :- Provides the user with a link to their Discord avatar \n >bottest :- used for testing the bot connectivity```");
   }
 
   //Kick Command (Probably used to kick king from discord)
@@ -68,6 +68,25 @@ client.on('message', message => {
         console.error(e);
     });
   }
+
+  //Warning command
+  if (command === "warn"){
+    let modRole = message.guild.roles.find("name", "Super Admin");
+    if(!message.member.roles.has(modRole.id)){
+      return message.reply("Sory you dont have the power to do this!");
+    }
+    if(message.mentions.users.size === 0){
+      return message.reply("Please mention a user (@USER_NAME) to warn");
+    }
+    let warnMember = message.guild.member(message.mentions.users.first());
+    if(!warnMember){
+      return message.reply("That user does not seem valid");
+    }
+    if(!message.guild.member(client.user).hasPermission("KICK_MEMBERS")){
+      return message.reply("I'm sorry captain, I just dont have the power")
+    }
+      message.channel.sendMessage(`${warnMember} you have been warned`);
+    }
 
   //Avatar Command
   if (command === "avatarurl"){
