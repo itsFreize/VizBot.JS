@@ -1,7 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const git = require(`git-rev`);
-
 const config = require("./config.json")
 const help = require("./help.json")
 
@@ -83,7 +81,7 @@ client.on('message', message => {
       message.channel.sendMessage(`${warnMember} you have been warned`);
     }
 
-  //FancyHelp
+  //Help Commands
   if (command === "help"){
     var fs = require("fs");
     var contents = fs.readFileSync("help.json");
@@ -188,6 +186,22 @@ client.on('message', message => {
     message.reply(jsonContent.helpbottest);
   }
 
+  if(command === "about_help"){
+    var fs = require("fs");
+    var contents = fs.readFileSync("help.json");
+    var jsonContent = JSON.parse(contents);
+
+    message.reply(jsonContent.helpabout);
+  }
+
+  if(command === "aboutlong_help"){
+    var fs = require("fs");
+    var contents = fs.readFileSync("help.json");
+    var jsonContent = JSON.parse(contents);
+
+    message.reply(jsonContent.helpaboutlong);
+  }
+
   //Avatar Command
   if (command === "avatarurl"){
     message.reply(message.author.avatarURL);
@@ -207,6 +221,17 @@ client.on('message', message => {
     var droll = require(`droll`);
     var result = droll.roll(`2d6`);
     message.reply(`Your dice results are: ${result}`);
+  }
+
+  //About command
+  if (command === "about"){
+    var git = require("git-rev-sync");
+    message.reply("\nShort commit number: "+ git.short());
+  }
+
+  if(command === "aboutlong"){
+    var git = require("git-rev-sync");
+    message.reply("\nLong commit number: "+ git.long());
   }
 
   //Addition Command

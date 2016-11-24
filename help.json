@@ -1,5 +1,5 @@
 {
-    "text":"```\n**VizBot.JS** \n Welcome to the Vizbot.JS help system \n ---------- \n All commands are prefaced by a greater than symbol (>) and must be\n written in lower case E.G >help would bring up this help menu. \n \n >? \n >kick\n >warn \n >add\n >subtract\n >multiply\n >divide\n >say \n >purge\n >avatarurl\n >dice\n >bottest\n ----------\n You can get further help by typing the command followed by an underscore then the word help E.G >help_help```",
+    "text":"```\n**VizBot.JS** \n Welcome to the Vizbot.JS help system \n ---------- \n All commands are prefaced by a greater than symbol (>) and must be\n written in lower case E.G >help would bring up this help menu. \n \n >? \n >kick\n >warn \n >add\n >subtract\n >multiply\n >divide\n >say \n >purge\n >avatarurl\n >dice\n about\n >aboutlong\n >bottest\n ----------\n You can get further help by typing the command followed by an underscore then the word help E.G >help_help```",
 
     "helphelp" : "```USAGE: >help :- Brings up the main help menu.```",
     "helpkick" : "```USAGE: >kick <@USER_NAME> :- Kicks the mentioned user from the Discord server.```",
@@ -12,6 +12,8 @@
     "helppurge" : "```USAGE: >purge :- Purges the chat of the last 100 messages (Usably by Super Admins only)```",
     "helpavatar" : "```USAGE: >avatarurl :- Provides the user with a link to their discord avatar.```",
     "helpdice" : "```USAGE: >dice :- Rolls two dice and presents the user with the result.```",
-    "helpbottest" : "```USAGE: bottest :- Bot should reply with a test confirmation message.```"
+    "helpbottest" : "```USAGE: >bottest :- Bot should reply with a test confirmation message.```",
+    "helpabout" : "```USAGE: >about :- Provides the abbreviated github commit number.```",
+    "helpaboutlong" : "```USAGE: >aboutlong :- Provides the long github commit number. ```"
 
 }
