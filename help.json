@@ -1,5 +1,5 @@
 {
-    "text":"```\n**VizBot.JS** \n Welcome to the Vizbot.JS help system \n ---------- \n All commands are prefaced by a greater than symbol (>) and must be\n written in lower case E.G >help would bring up this help menu. \n \n >? \n >kick\n >warn \n >add\n >subtract\n >multiply\n >divide\n >say \n >purge\n >avatarurl\n >dice\n about\n >aboutlong\n >gen\n >yeahbaby \n >verygrr\n >bottest\n ----------\n You can get further help by typing the command followed by an underscore then the word help E.G >help_help```",
+    "text":"```\n**VizBot.JS** \n Welcome to the Vizbot.JS help system \n ---------- \n All commands are prefaced by a greater than symbol (>) and must be\n written in lower case E.G >help would bring up this help menu. \n \n >? \n >kick\n >warn \n >add\n >subtract\n >multiply\n >divide\n >say \n >purge\n >avatarurl\n >dice\n >about\n >aboutlong\n >gen\n >yeahbaby \n >verygrr\n >horny\n >yomama\n >strat\n >bottest\n ----------\n You can get further help by typing the command followed by an underscore then the word help E.G >help_help```",
 
     "helphelp" : "Brings up the full help menu",
     "helpkick" : "Kicks the mentioned user from the Discord server.",
@@ -16,5 +16,7 @@
     "helpabout" : "Provides the abbreviated github commit number.",
     "helpaboutlong" : "Provides the long github commit number.",
     "helpgen" : "Generates a random string 10 characters long.",
-    "helpaustin" : "Oh behave."
+    "helpaustin" : "Oh behave.",
+    "helpyomama" : "Generate a random yomama joke from a stored list of yomama jokes",
+    "helpstrat" : "Generates a random strat from a stored list of strats"
 }

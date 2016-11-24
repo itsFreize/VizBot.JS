@@ -645,6 +645,102 @@ client.on('message', message => {
       })
   }
 
+  if(command === "horny_help"){
+    var fs = require("fs");
+    var contents = fs.readFileSync("help.json");
+    var jsonContent = JSON.parse(contents);
+
+    message.reply("", {
+      embed: {
+        title: "VizBot.JS Help Guide: Horny command",
+        description: "Detailed guide for our horny command.",
+        fields:[
+          {
+            name: "Usage:",
+            value: " >horny",
+            inline: true
+          },
+          {
+            name: "Description:",
+            value: jsonContent.helpaustin,
+            inline: true
+          }
+        ],
+        color: 0xff00D4,
+        timestamp: new Date(),
+        footer:
+        {
+          text: "<3 VizBot.JS",
+          inline: true
+        }
+      }
+      })
+  }
+
+  if(command === "yomama_help"){
+    var fs = require("fs");
+    var contents = fs.readFileSync("help.json");
+    var jsonContent = JSON.parse(contents);
+
+    message.reply("", {
+      embed: {
+        title: "VizBot.JS Help Guide: YoMama command",
+        description: "Detailed guide for our yomama command.",
+        fields:[
+          {
+            name: "Usage:",
+            value: " >yomama",
+            inline: true
+          },
+          {
+            name: "Description:",
+            value: jsonContent.helpyomama,
+            inline: true
+          }
+        ],
+        color: 0xff00D4,
+        timestamp: new Date(),
+        footer:
+        {
+          text: "<3 VizBot.JS",
+          inline: true
+        }
+      }
+      })
+  }
+
+  if(command === "strat_help"){
+    var fs = require("fs");
+    var contents = fs.readFileSync("help.json");
+    var jsonContent = JSON.parse(contents);
+
+    message.reply("", {
+      embed: {
+        title: "VizBot.JS Help Guide: Strat command",
+        description: "Detailed guide for our strat command.",
+        fields:[
+          {
+            name: "Usage:",
+            value: " >strat",
+            inline: true
+          },
+          {
+            name: "Description:",
+            value: jsonContent.helpstrat,
+            inline: true
+          }
+        ],
+        color: 0xff00D4,
+        timestamp: new Date(),
+        footer:
+        {
+          text: "<3 VizBot.JS",
+          inline: true
+        }
+      }
+      })
+  }
+
   //Avatar Command
   if (command === "avatarurl"){
     message.reply(message.author.avatarURL);
@@ -725,8 +821,71 @@ client.on('message', message => {
       message.reply(text);
   }
 
+  //YOmama
+  if(command === "yomama"){
+      var Joke = new Array()
+
+      Joke[0] = "Yo mama so fat she goes to KFC and licks other people’s fingers.";
+      Joke[1] = "Yo mama so dumb when you stand next to her you hear the ocean!";
+      Joke[2] = "Yo momma so stupid, when I told her that she lost her mind, she went looking for it.";
+      Joke[3] = "Yo momma so fat Burger King hired her because she eats cows and shits hamburgers.";
+      Joke[4] = "Yo mama so fat she left the house in high heels and when she came back she had on flip flops.";
+      Joke[5] = "Yo mama so ugly, even hello kitty said goodbye.";
+      Joke[6] = "Yo mama so fat she ate a whole Pizza… Hut.";
+      Joke[7] = "Yo mama is so dumb she got awarded the Nobel prize for stupidity.";
+      Joke[8] = "Yo momma so ugly she threw a boomerang and it refused to come back.";
+      Joke[9] = "Yo mama so dumb she sold her car for gas money!";
+      Joke[10] = "Yo Mamas so stupid she was yelling into the mailbox. We ask her what’s she doing and she said, she was sending a voice-mail."
+
+      var J = Joke.length;
+      var whichJoke=Math.round(Math.random()*(J-1));
+      function showJoke(){
+        message.reply(Joke[whichJoke]);
+      }
+      showJoke();
+  }
+
+  if(command === "strat"){
+    var Strat = new Array()
+
+    Strat[0] = "Only one person may leave spawn. When that person dies, the next person leaves.";
+    Strat[1] = "180 your headset.";
+    Strat[2] = "Everyone buys Duel Berettas and crouch rushes any site.";
+    Strat[3] = "Everyone tries to ninja defuse.";
+    Strat[4] = "You can't have the bomb in your inventory for more than 5 sdeoncds: you **MUST** throw it to someone else before time's up.";
+    Strat[5] = "No one gets to leave spawn";
+    Strat[6] = "One person buys a gun and everyone follows him and picks up the gun when he/she dies";
+    Strat[7] = "Everyone buys a Zues and a Zeus only!";
+    Strat[8] = "5 deagles = go Juan or go home!";
+    Strat[9] = "Buy 1 deagle. pass it to a teammate after 1 shot.";
+    Strat[10] = "Plant at one site. **ONLY** after passing through the other.";
+    Strat[11] = "Peek and enemy awper one by one with pistols only.";
+    Strat[12] = "You can only use the S key to move around.";
+    Strat[13] = "2 x two-man 'towers' anywhere. Last man has to rush or ninja defuse.";
+    Strat[14] = "Deagles only! If you get a body shot, you have to follow up with a knife.";
+    Strat[15] = "Switch hands for your mouse and keyboard.";
+    Strat[16] = "Every time you kill an enemy, you must pick up the weapon he/she drops(including pistols) and use it for your next kill.";
+    Strat[17] = "Shotguns only.";
+    Strat[18] = "Only going forward is allowed, no sidestepping or going backwards";
+    Strat[19] = "Jumpshots only";
+    Strat[20] = "Use teamwork and tactical grenades to prevent enemy pushes while you try to incapacitate your enemies with the Zeus taser. Any teammate that fires a gun other than the Zeus is indefinitely suspended (kicked) without pay or referred to as Darren Wilson for the remainder of the game.";
+    Strat[21] = "Your team plays a normal round, but any player hit by enemy damage performs a soccer flop the second they are hit, and must stay in position and defend themselves until the end of the round. If you are killed after flopping, promptly plead your case to the nearby referee to card the offender by accusing the enemy player of being a hacker in chat.";
+    Strat[22] = "Gun control laws have reduced the amount of rounds you can carry in your weapon thanks to anti-gun rallies sponsored by your local Starbucks. Each teammate must buy an AK/M4 and dump their ammo at the beginning of the round until they only have one magazine left (can't reload). Sorry, M4A1-S fanboys.";
+    Strat[23] = "Equip your whole team with machine guns (m249/para or negev). Teammates cannot stop to fire and must keep moving while shooting.";
+    Strat[24] = "Say it with your chest! Your team can only go for body shots (try to aim for the chest). Teammates that get kills with headshots (intentionally or otherwise) can't buy next round.";
+    Strat[25] = "For one round, bind your screenshot key to your LMB button and fire whenever you normally would. For bonus points, compile these images into a GIF, WEBM or YouTube video";
+
+    var S = Strat.length;
+    var whichStrat = Math.round(Math.random()*(S-1));
+    function showStrat(){
+      message.reply(Strat[whichStrat]);
+    }
+    showStrat();
+  }
+
   //Austin Powers realted
   if (command === "yeahbaby"){
+    //https://www.youtube.com/watch?v=ec_n2YTdA24
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel){
       return message.reply("Please be in a voice channel first");
@@ -734,6 +893,22 @@ client.on('message', message => {
     voiceChannel.join()
       .then(connection =>{
         let stream = yt("https://www.youtube.com/watch?v=ayLPWCLot74", {audioonly: true});
+        const dispatcher = connection.playStream(stream);
+        dispatcher.on('end',() => {
+          voiceChannel.leave();
+        })
+      });
+  }
+
+  if (command === "horny"){
+    //https://www.youtube.com/watch?v=ec_n2YTdA24
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel){
+      return message.reply("Please be in a voice channel first");
+    }
+    voiceChannel.join()
+      .then(connection =>{
+        let stream = yt("https://www.youtube.com/watch?v=ec_n2YTdA24", {audioonly: true});
         const dispatcher = connection.playStream(stream);
         dispatcher.on('end',() => {
           voiceChannel.leave();
