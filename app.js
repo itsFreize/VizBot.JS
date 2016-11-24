@@ -92,12 +92,45 @@ client.on('message', message => {
     message.reply(jsonContent.text);
   }
 
+  // if (command === "test"){
+  //   message.channel.sendMessage("", {
+  //     embed: {
+  //       title : ">test_",
+  //       description: ">_ This is working"
+  //     }
+  //   })
+  // }
+
   if (command === "help_help"){
     var fs = require("fs");
     var contents = fs.readFileSync("help.json");
     var jsonContent = JSON.parse(contents);
 
-    message.reply(jsonContent.helphelp);
+    message.reply("", {
+      embed: {
+        title: "VizBot.JS Help Guide: Help command",
+        description: "Detailed guide for our help command.",
+        fields:[
+          {
+            name: "Usage:",
+            value: " >help",
+            inline: true
+          },
+          {
+            name: "Description:",
+            value: jsonContent.helphelp,
+            inline: true
+          }
+        ],
+        color: 0xff00D4,
+        timestamp: new Date(),
+        footer:
+        {
+          text: "<3 VizBot.JS",
+          inline: true
+        }
+      }
+      })
   }
 
   if (command === "kick_help"){
@@ -105,7 +138,31 @@ client.on('message', message => {
     var contents = fs.readFileSync("help.json");
     var jsonContent = JSON.parse(contents);
 
-    message.reply(jsonContent.helpkick);
+    message.reply("", {
+      embed: {
+        title: "VizBot.JS Help Guide: Kick command",
+        description: "Detailed guide for our kick command.",
+        fields:[
+          {
+            name: "Usage:",
+            value: " >kick",
+            inline: true
+          },
+          {
+            name: "Description:",
+            value: jsonContent.helpkick,
+            inline: true
+          }
+        ],
+        color: 0xff00D4,
+        timestamp: new Date(),
+        footer:
+        {
+          text: "<3 VizBot.JS",
+          inline: true
+        }
+      }
+      })
   }
 
   if (command === "warn_help"){
@@ -113,7 +170,31 @@ client.on('message', message => {
     var contents = fs.readFileSync("help.json");
     var jsonContent = JSON.parse(contents);
 
-    message.reply(jsonContent.helpwarn);
+    message.reply("", {
+      embed: {
+        title: "VizBot.JS Help Guide: Warn command",
+        description: "Detailed guide for our warn command.",
+        fields:[
+          {
+            name: "Usage:",
+            value: " >warn",
+            inline: true
+          },
+          {
+            name: "Description:",
+            value: jsonContent.helpwarn,
+            inline: true
+          }
+        ],
+        color: 0xff00D4,
+        timestamp: new Date(),
+        footer:
+        {
+          text: "<3 VizBot.JS",
+          inline: true
+        }
+      }
+      })
   }
 
   if (command === "add_help"){
@@ -121,7 +202,31 @@ client.on('message', message => {
     var contents = fs.readFileSync("help.json");
     var jsonContent = JSON.parse(contents);
 
-    message.reply(jsonContent.helpadd);
+    message.reply("", {
+      embed: {
+        title: "VizBot.JS Help Guide: Add command",
+        description: "Detailed guide for our add command.",
+        fields:[
+          {
+            name: "Usage:",
+            value: " >add",
+            inline: true
+          },
+          {
+            name: "Description:",
+            value: jsonContent.helpadd,
+            inline: true
+          }
+        ],
+        color: 0xff00D4,
+        timestamp: new Date(),
+        footer:
+        {
+          text: "<3 VizBot.JS",
+          inline: true
+        }
+      }
+      })
   }
 
   if (command === "subtract_help"){
@@ -129,7 +234,31 @@ client.on('message', message => {
     var contents = fs.readFileSync("help.json");
     var jsonContent = JSON.parse(contents);
 
-    message.reply(jsonContent.helpsubtract);
+    message.reply("", {
+      embed: {
+        title: "VizBot.JS Help Guide: Subtract command",
+        description: "Detailed guide for our subtract command.",
+        fields:[
+          {
+            name: "Usage:",
+            value: " >subtract",
+            inline: true
+          },
+          {
+            name: "Description:",
+            value: jsonContent.helpsubtract,
+            inline: true
+          }
+        ],
+        color: 0xff00D4,
+        timestamp: new Date(),
+        footer:
+        {
+          text: "<3 VizBot.JS",
+          inline: true
+        }
+      }
+      })
   }
 
   if (command === "multiply_help"){
@@ -137,7 +266,31 @@ client.on('message', message => {
     var contents = fs.readFileSync("help.json");
     var jsonContent = JSON.parse(contents);
 
-    message.reply(jsonContent.helpmultiply);
+    message.reply("", {
+      embed: {
+        title: "VizBot.JS Help Guide: Multiply command",
+        description: "Detailed guide for our multiply command.",
+        fields:[
+          {
+            name: "Usage:",
+            value: " >multiply",
+            inline: true
+          },
+          {
+            name: "Description:",
+            value: jsonContent.helpmultiply,
+            inline: true
+          }
+        ],
+        color: 0xff00D4,
+        timestamp: new Date(),
+        footer:
+        {
+          text: "<3 VizBot.JS",
+          inline: true
+        }
+      }
+      })
   }
 
   if (command === "divide_help"){
@@ -145,7 +298,31 @@ client.on('message', message => {
     var contents = fs.readFileSync("help.json");
     var jsonContent = JSON.parse(contents);
 
-    message.reply(jsonContent.helpdivide);
+    message.reply("", {
+      embed: {
+        title: "VizBot.JS Help Guide: Divide command",
+        description: "Detailed guide for our divide command.",
+        fields:[
+          {
+            name: "Usage:",
+            value: " >divide",
+            inline: true
+          },
+          {
+            name: "Description:",
+            value: jsonContent.helpdivide,
+            inline: true
+          }
+        ],
+        color: 0xff00D4,
+        timestamp: new Date(),
+        footer:
+        {
+          text: "<3 VizBot.JS",
+          inline: true
+        }
+      }
+      })
   }
 
   if (command === "say_help"){
@@ -153,7 +330,31 @@ client.on('message', message => {
     var contents = fs.readFileSync("help.json");
     var jsonContent = JSON.parse(contents);
 
-    message.reply(jsonContent.helpsay);
+    message.reply("", {
+      embed: {
+        title: "VizBot.JS Help Guide: Say command",
+        description: "Detailed guide for our say command.",
+        fields:[
+          {
+            name: "Usage:",
+            value: " >say",
+            inline: true
+          },
+          {
+            name: "Description:",
+            value: jsonContent.helpsay,
+            inline: true
+          }
+        ],
+        color: 0xff00D4,
+        timestamp: new Date(),
+        footer:
+        {
+          text: "<3 VizBot.JS",
+          inline: true
+        }
+      }
+      })
   }
 
   if (command === "purge_help"){
@@ -161,7 +362,31 @@ client.on('message', message => {
     var contents = fs.readFileSync("help.json");
     var jsonContent = JSON.parse(contents);
 
-    message.reply(jsonContent.helppurge);
+    message.reply("", {
+      embed: {
+        title: "VizBot.JS Help Guide: Purge command",
+        description: "Detailed guide for our purge command.",
+        fields:[
+          {
+            name: "Usage:",
+            value: " >purge",
+            inline: true
+          },
+          {
+            name: "Description:",
+            value: jsonContent.helppurge,
+            inline: true
+          }
+        ],
+        color: 0xff00D4,
+        timestamp: new Date(),
+        footer:
+        {
+          text: "<3 VizBot.JS",
+          inline: true
+        }
+      }
+      })
   }
 
   if (command === "avatarurl_help"){
@@ -169,7 +394,31 @@ client.on('message', message => {
     var contents = fs.readFileSync("help.json");
     var jsonContent = JSON.parse(contents);
 
-    message.reply(jsonContent.helpavatar);
+    message.reply("", {
+      embed: {
+        title: "VizBot.JS Help Guide: AvatarURL command",
+        description: "Detailed guide for our avatarurl command.",
+        fields:[
+          {
+            name: "Usage:",
+            value: " >avatarurl",
+            inline: true
+          },
+          {
+            name: "Description:",
+            value: jsonContent.helpavatar,
+            inline: true
+          }
+        ],
+        color: 0xff00D4,
+        timestamp: new Date(),
+        footer:
+        {
+          text: "<3 VizBot.JS",
+          inline: true
+        }
+      }
+      })
   }
 
   if (command === "dice_help"){
@@ -177,7 +426,31 @@ client.on('message', message => {
     var contents = fs.readFileSync("help.json");
     var jsonContent = JSON.parse(contents);
 
-    message.reply(jsonContent.helpdice);
+    message.reply("", {
+      embed: {
+        title: "VizBot.JS Help Guide: Dice command",
+        description: "Detailed guide for our dice command.",
+        fields:[
+          {
+            name: "Usage:",
+            value: " >dice",
+            inline: true
+          },
+          {
+            name: "Description:",
+            value: jsonContent.helpdice,
+            inline: true
+          }
+        ],
+        color: 0xff00D4,
+        timestamp: new Date(),
+        footer:
+        {
+          text: "<3 VizBot.JS",
+          inline: true
+        }
+      }
+      })
   }
 
   if (command === "bottest_help"){
@@ -185,7 +458,31 @@ client.on('message', message => {
     var contents = fs.readFileSync("help.json");
     var jsonContent = JSON.parse(contents);
 
-    message.reply(jsonContent.helpbottest);
+    message.reply("", {
+      embed: {
+        title: "VizBot.JS Help Guide: BotTest command",
+        description: "Detailed guide for our BotTest command.",
+        fields:[
+          {
+            name: "Usage:",
+            value: " >bottest",
+            inline: true
+          },
+          {
+            name: "Description:",
+            value: jsonContent.helpbottest,
+            inline: true
+          }
+        ],
+        color: 0xff00D4,
+        timestamp: new Date(),
+        footer:
+        {
+          text: "<3 VizBot.JS",
+          inline: true
+        }
+      }
+      })
   }
 
   if(command === "about_help"){
@@ -193,7 +490,31 @@ client.on('message', message => {
     var contents = fs.readFileSync("help.json");
     var jsonContent = JSON.parse(contents);
 
-    message.reply(jsonContent.helpabout);
+    message.reply("", {
+      embed: {
+        title: "VizBot.JS Help Guide: About command",
+        description: "Detailed guide for our about command.",
+        fields:[
+          {
+            name: "Usage:",
+            value: " >about",
+            inline: true
+          },
+          {
+            name: "Description:",
+            value: jsonContent.helpabout,
+            inline: true
+          }
+        ],
+        color: 0xff00D4,
+        timestamp: new Date(),
+        footer:
+        {
+          text: "<3 VizBot.JS",
+          inline: true
+        }
+      }
+      })
   }
 
   if(command === "aboutlong_help"){
@@ -201,7 +522,31 @@ client.on('message', message => {
     var contents = fs.readFileSync("help.json");
     var jsonContent = JSON.parse(contents);
 
-    message.reply(jsonContent.helpaboutlong);
+    message.reply("", {
+      embed: {
+        title: "VizBot.JS Help Guide: AboutLong command",
+        description: "Detailed guide for our aboutlong command.",
+        fields:[
+          {
+            name: "Usage:",
+            value: " >aboutlong",
+            inline: true
+          },
+          {
+            name: "Description:",
+            value: jsonContent.helpaboutlong,
+            inline: true
+          }
+        ],
+        color: 0xff00D4,
+        timestamp: new Date(),
+        footer:
+        {
+          text: "<3 VizBot.JS",
+          inline: true
+        }
+      }
+      })
   }
 
   if(command === "gen_help"){
@@ -209,7 +554,31 @@ client.on('message', message => {
     var contents = fs.readFileSync("help.json");
     var jsonContent = JSON.parse(contents);
 
-    message.reply(jsonContent.helpgen);
+    message.reply("", {
+      embed: {
+        title: "VizBot.JS Help Guide: Gen command",
+        description: "Detailed guide for our gen command.",
+        fields:[
+          {
+            name: "Usage:",
+            value: " >gen",
+            inline: true
+          },
+          {
+            name: "Description:",
+            value: jsonContent.helpgen,
+            inline: true
+          }
+        ],
+        color: 0xff00D4,
+        timestamp: new Date(),
+        footer:
+        {
+          text: "<3 VizBot.JS",
+          inline: true
+        }
+      }
+      })
   }
 
   if(command === "verygrr_help"){
@@ -217,7 +586,31 @@ client.on('message', message => {
     var contents = fs.readFileSync("help.json");
     var jsonContent = JSON.parse(contents);
 
-    message.reply(jsonContent.helpaustin);
+    message.reply("", {
+      embed: {
+        title: "VizBot.JS Help Guide: VeryGRR command",
+        description: "Detailed guide for our verygrr command.",
+        fields:[
+          {
+            name: "Usage:",
+            value: " >verygrr",
+            inline: true
+          },
+          {
+            name: "Description:",
+            value: jsonContent.helpaustin,
+            inline: true
+          }
+        ],
+        color: 0xff00D4,
+        timestamp: new Date(),
+        footer:
+        {
+          text: "<3 VizBot.JS",
+          inline: true
+        }
+      }
+      })
   }
 
   if(command === "yeahbaby_help"){
@@ -225,7 +618,31 @@ client.on('message', message => {
     var contents = fs.readFileSync("help.json");
     var jsonContent = JSON.parse(contents);
 
-    message.reply(jsonContent.helpaustin);
+    message.reply("", {
+      embed: {
+        title: "VizBot.JS Help Guide: YeahBaby command",
+        description: "Detailed guide for our yeahaby command.",
+        fields:[
+          {
+            name: "Usage:",
+            value: " >yeahbaby",
+            inline: true
+          },
+          {
+            name: "Description:",
+            value: jsonContent.helpaustin,
+            inline: true
+          }
+        ],
+        color: 0xff00D4,
+        timestamp: new Date(),
+        footer:
+        {
+          text: "<3 VizBot.JS",
+          inline: true
+        }
+      }
+      })
   }
 
   //Avatar Command
