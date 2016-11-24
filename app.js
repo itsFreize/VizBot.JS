@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const yt = require('ytdl-core');
 
 const config = require("./config.json")
 const help = require("./help.json")
@@ -211,6 +212,22 @@ client.on('message', message => {
     message.reply(jsonContent.helpgen);
   }
 
+  if(command === "verygrr_help"){
+    var fs = require("fs");
+    var contents = fs.readFileSync("help.json");
+    var jsonContent = JSON.parse(contents);
+
+    message.reply(jsonContent.helpaustin);
+  }
+
+  if(command === "yeahbaby_help"){
+    var fs = require("fs");
+    var contents = fs.readFileSync("help.json");
+    var jsonContent = JSON.parse(contents);
+
+    message.reply(jsonContent.helpaustin);
+  }
+
   //Avatar Command
   if (command === "avatarurl"){
     message.reply(message.author.avatarURL);
@@ -289,6 +306,37 @@ client.on('message', message => {
         text += possible.charAt(Math.floor(Math.random() * possible.length));
 
       message.reply(text);
+  }
+
+  //Austin Powers realted
+  if (command === "yeahbaby"){
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel){
+      return message.reply("Please be in a voice channel first");
+    }
+    voiceChannel.join()
+      .then(connection =>{
+        let stream = yt("https://www.youtube.com/watch?v=ayLPWCLot74", {audioonly: true});
+        const dispatcher = connection.playStream(stream);
+        dispatcher.on('end',() => {
+          voiceChannel.leave();
+        })
+      });
+  }
+
+  if (command === "verygrr"){
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel){
+      return message.reply("Please be in a voice channel first");
+    }
+    voiceChannel.join()
+      .then(connection =>{
+        let stream = yt("https://www.youtube.com/watch?v=N-oGL6e744A", {audioonly: true});
+        const dispatcher = connection.playStream(stream);
+        dispatcher.on('end',() => {
+          voiceChannel.leave();
+        })
+      });
   }
 
   //Super baisc ping command used to ensure the bot is online
