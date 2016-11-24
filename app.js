@@ -1,11 +1,12 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+
 const config = require("./config.json")
 const help = require("./help.json")
 
 client.on('ready', () => {
   console.log('I am ready!');
-  client.user.setGame("Setting up skynet")
+  client.user.setStatus("Setting up skynet")
 });
 
 client.on("guildMemberAdd", member => {
@@ -202,6 +203,14 @@ client.on('message', message => {
     message.reply(jsonContent.helpaboutlong);
   }
 
+  if(command === "gen_help"){
+    var fs = require("fs");
+    var contents = fs.readFileSync("help.json");
+    var jsonContent = JSON.parse(contents);
+
+    message.reply(jsonContent.helpgen);
+  }
+
   //Avatar Command
   if (command === "avatarurl"){
     message.reply(message.author.avatarURL);
@@ -269,6 +278,17 @@ client.on('message', message => {
   //basic Say command
   if(command === "say"){
     message.channel.sendMessage(args.join(" "))
+  }
+
+  //Generator Command
+  if(command === "gen"){
+      var text ="";
+      var possible ="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+      for( var i=0; i <10; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+      message.reply(text);
   }
 
   //Super baisc ping command used to ensure the bot is online
