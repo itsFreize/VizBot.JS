@@ -845,35 +845,38 @@ client.on('message', message => {
       showJoke();
   }
 
+  //StratRoullete
   if(command === "strat"){
+    var fs = require("fs");
+    var contents = fs.readFileSync("./strats.json");
+    var jsonContent = JSON.parse(contents);
     var Strat = new Array()
 
-    Strat[0] = "Only one person may leave spawn. When that person dies, the next person leaves.";
-    Strat[1] = "180 your headset.";
-    Strat[2] = "Everyone buys Duel Berettas and crouch rushes any site.";
-    Strat[3] = "Everyone tries to ninja defuse.";
-    Strat[4] = "You can't have the bomb in your inventory for more than 5 sdeoncds: you **MUST** throw it to someone else before time's up.";
-    Strat[5] = "No one gets to leave spawn";
-    Strat[6] = "One person buys a gun and everyone follows him and picks up the gun when he/she dies";
-    Strat[7] = "Everyone buys a Zues and a Zeus only!";
-    Strat[8] = "5 deagles = go Juan or go home!";
-    Strat[9] = "Buy 1 deagle. pass it to a teammate after 1 shot.";
-    Strat[10] = "Plant at one site. **ONLY** after passing through the other.";
-    Strat[11] = "Peek and enemy awper one by one with pistols only.";
-    Strat[12] = "You can only use the S key to move around.";
-    Strat[13] = "2 x two-man 'towers' anywhere. Last man has to rush or ninja defuse.";
-    Strat[14] = "Deagles only! If you get a body shot, you have to follow up with a knife.";
-    Strat[15] = "Switch hands for your mouse and keyboard.";
-    Strat[16] = "Every time you kill an enemy, you must pick up the weapon he/she drops(including pistols) and use it for your next kill.";
-    Strat[17] = "Shotguns only.";
-    Strat[18] = "Only going forward is allowed, no sidestepping or going backwards";
-    Strat[19] = "Jumpshots only";
-    Strat[20] = "Use teamwork and tactical grenades to prevent enemy pushes while you try to incapacitate your enemies with the Zeus taser. Any teammate that fires a gun other than the Zeus is indefinitely suspended (kicked) without pay or referred to as Darren Wilson for the remainder of the game.";
-    Strat[21] = "Your team plays a normal round, but any player hit by enemy damage performs a soccer flop the second they are hit, and must stay in position and defend themselves until the end of the round. If you are killed after flopping, promptly plead your case to the nearby referee to card the offender by accusing the enemy player of being a hacker in chat.";
-    Strat[22] = "Gun control laws have reduced the amount of rounds you can carry in your weapon thanks to anti-gun rallies sponsored by your local Starbucks. Each teammate must buy an AK/M4 and dump their ammo at the beginning of the round until they only have one magazine left (can't reload). Sorry, M4A1-S fanboys.";
-    Strat[23] = "Equip your whole team with machine guns (m249/para or negev). Teammates cannot stop to fire and must keep moving while shooting.";
-    Strat[24] = "Say it with your chest! Your team can only go for body shots (try to aim for the chest). Teammates that get kills with headshots (intentionally or otherwise) can't buy next round.";
-    Strat[25] = "For one round, bind your screenshot key to your LMB button and fire whenever you normally would. For bonus points, compile these images into a GIF, WEBM or YouTube video";
+    Strat[0] = jsonContent.strat1;
+    Strat[1] = jsonContent.strat2;
+    Strat[2] = jsonContent.strat3;
+    Strat[3] = jsonContent.strat4;
+    Strat[4] = jsonContent.strat5;
+    Strat[5] = jsonContent.strat6;
+    Strat[6] = jsonContent.strat7;
+    Strat[7] = jsonContent.strat8;
+    Strat[8] = jsonContent.strat9;
+    Strat[9] = jsonContent.strat10;
+    Strat[10] = jsonContent.strat11;
+    Strat[11] = jsonContent.strat12;
+    Strat[12] = jsonContent.strat13;
+    Strat[13] = jsonContent.strat14;
+    Strat[14] = jsonContent.strat15;
+    Strat[15] = jsonContent.strat16;
+    Strat[16] = jsonContent.strat17;
+    Strat[17] = jsonContent.strat18;
+    Strat[18] = jsonContent.strat19;
+    Strat[19] = jsonContent.strat20;
+    Strat[20] = jsonContent.strat21;
+    Strat[21] = jsonContent.strat22;
+    Strat[22] = jsonContent.strat23;
+    Strat[23] = jsonContent.strat24;
+    Strat[24] = jsonContent.strat25;
 
     var S = Strat.length;
     var whichStrat = Math.round(Math.random()*(S-1));

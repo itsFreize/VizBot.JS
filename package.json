@@ -1,0 +1,27 @@
+{
+  "name" : "vizbot.js",
+  "version" : "0.0.1",
+  "main" : "./app.js",
+  "scripts" : {
+    "test" : "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "git+https://github.com/itsFreize/VizBot.JS"
+  },
+  "keywords" : [
+    "Discord",
+    "Discordapp",
+    "Client",
+    "Bot",
+    "Library"
+  ],
+  "author" : "Vizual",
+  "license" : "MIT",
+  "dependencies" : {
+    "discord.js" : "",
+    "droll" : "",
+    "ytdl-core" : "",
+    "git-rev-sync" : "" 
+  }
+}
